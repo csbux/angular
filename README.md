@@ -13,7 +13,6 @@
 
 Obviously, you need AngularJS (I used v1.3.14) and Bootstrap CSS (I used v3.3.2), like for any AngularJS app. The other more specific dependency is AngularUI Bootstrap. You can reference all of these from your favorite CDN (or you can just download them).
 
-```
 
 # Support
 
