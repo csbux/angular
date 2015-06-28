@@ -11,8 +11,16 @@
 
 # Dependencies
 
-Obviously, you need AngularJS (I used v1.3.14) and Bootstrap CSS (I used v3.3.2), like for any AngularJS app. The other more specific dependency is AngularUI Bootstrap. You can reference all of these from your favorite CDN (or you can just download them).
+Obviously, you need AngularJS (I used v1.3.14) and Bootstrap CSS (I used v3.3.2), like for any AngularJS app. The other more specific dependency is AngularUI Bootstrap (for the basic tab directive, I used v0.13.0). You can reference all of these from your favorite CDN (or you can just download them).
 
+Once you have those, head-over to Github and you’ll find the minified directive under dist (csbux.min.js).You can also grab the csbux.min.css stylesheet from the same location, in order to get you started quickly with the directive.
+
+
+When you are done downloading all the dependencies and project files the only remaining part is to add dependencies on the `ui.bootstrap` and `csbux.directives.dts` modules:
+
+```js
+angular.module('myModule', ['ui.bootstrap', 'csbux.directives.dts']);
+```
 
 # Support
 

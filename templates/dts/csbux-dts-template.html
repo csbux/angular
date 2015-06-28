@@ -1,0 +1,64 @@
+<tabset>									
+	<tab ng-repeat="tab in tabs | orderBy:'order'" active="tab.active">		
+		<tab-heading>				
+			<div>
+				<div dts-drop-object="true" x-on-drag="dragged(dragEl, dropEl)" data-dtsId="{{$index}}" class="inlineDiv">
+					<span>{{tab.title}}</span>											
+				</div>
+				<div class="inlineDiv">
+					<a href="{{tab.title}}" ng-click="" ng-show="tabs.length > 1" class="iconSeparator" dts-draggable="true" data-dtsId="{{$index}}" ng-hide="tab.isPlaceholder">
+						<span class="glyphicon glyphicon-transfer"></span>										
+					</a>
+					<a href="#" ng-click="tab.toEdit = true; editTab()" class="iconSeparator" ng-hide="tab.isPlaceholder">
+						<span class="glyphicon glyphicon-edit"></span>										
+					</a>
+					<a href="#" ng-click="tab.toRemove = true; removeTab()" ng-show="tabs.length > 1" class="iconSeparator" ng-hide="tab.isPlaceholder">
+						<span class="glyphicon glyphicon-remove"></span>										
+					</a>				
+				</div>				
+			</div>									
+		</tab-heading>
+		<div ng-include src="tab.content"></div>			
+	</tab>									
+	<tab select="addTab()" active="addActive">
+		<tab-heading>		
+			<div>
+				<span class="glyphicon glyphicon-plus"></span>		
+			</div>
+		</tab-heading>      
+
+		<script type="text/ng-template" id="myModalContent.html">
+			<div class="modal-header">
+				<h3 class="modal-title">Add a new tab</h3>
+			</div>
+			<div class="modal-body">
+				<form name="myForm" class="form-horizontal">
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="name">Name:</label>
+						<div class="col-sm-10">
+							<input class="form-control" name="name" placeholder="Enter name" ng-model="tab.name" required>														
+							<br />
+							<div ng-show="myForm.name.$touched">
+								<span ng-show="myForm.name.$error.required">Tell me the tab name.</span>															
+							</div>														
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="content">Content:</label>
+						<div class="col-sm-10">
+							<input class="form-control" name="content" placeholder="Enter content" ng-model="tab.content" required>					
+							<br />
+							<div ng-show="myForm.content.$touched">
+								<span ng-show="myForm.content.$error.required">Tell me about the tab content.</span>								
+							</div>														
+						</div>
+					</div>									            	   									            	   
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-primary" ng-click="ok(tab)" ng-keyup="$event.keyCode == 13 ? ok(tab) : null">OK</button>
+				<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+			</div>
+		</script>
+	</tab>
+</tabset>

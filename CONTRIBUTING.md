@@ -1,6 +1,6 @@
 ## Got a question or problem?
 
-Please read the [README.md](README.md).
+Please read the [README.md](README.md) and [FAQ.md](FAQ.md).
 
 Basically, you should be posting comments on the related blog articles.
 
@@ -9,4 +9,4 @@ Basically, you should be posting comments on the related blog articles.
 That's awesome! Thank you so much!
 Just submit your Pull Requests and I will review them when I have time.
 
-Once the changes are reviewed, I'll be more than happy to accept your Pull Requests.
+Once your changes pass the review, I'll be more than happy to accept your Pull Requests.
