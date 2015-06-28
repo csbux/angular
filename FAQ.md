@@ -12,6 +12,7 @@ Each of the constituent regions of the Seven Kingdoms has about a dozen or so ma
 
 So, major releases will be named after major nouble houses in Westeros, while minor releases will be named after, you guessed it, minor houses :)
 
-The next major release is 1.0.0 Targaryen. Potential 1.x.y minor releases:
+The next major release is 1.0.0 Targaryen. Potential 1.x.0 minor releases:
 Blackfyre, Cargyll, Hollard
 
+Hotfix releases will be named after the latest major/minor release. E.g. Hotfix v1.0.1 (Targaryen).

@@ -21,6 +21,7 @@ When you are done downloading all the dependencies and project files the only re
 angular.module('myModule', ['ui.bootstrap', 'csbux.directives.dts']);
 ```
 
+# Support
 ## Need help?
 Need help using my directives?
 
